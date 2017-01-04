@@ -32,25 +32,25 @@ Created OAuth authorization.
   Token:       c3dd6bd6-126b-224e-b2be-c9fe52bc1ec6
 ```
 
-And store that oauth token in an environment variable called `HEROKU_OAUTH_TOKEN`, as it's referenced in the gem as `ENV["HEROKU_OAUTH_TOKEN"]`
+And store that oauth token in an environment variable called `HEROKU_OAUTH_TOKEN`
 
 
 To restart a specific dyno pass the application name and the dyno name:
 
 ```ruby
-HerokuDynoRestarter.restart_dyno('my-test-application', 'web.2')
+HerokuDynoRestarter.restart_dynos('my-test-application', 'web.2')
 ```
 
-To restart all dynos on an application, pass the application name without a dyno name:
+To restart all dynos of an application, pass the application name without a dyno name:
 
 ```ruby
-HerokuDynoRestarter.restart_all_dynos('my-test-application')
+HerokuDynoRestarter.restart_dynos('my-test-application')
 ```
 
-To restart all dynos of a specific type, pass the type [web/worker/foo]
+To restart all dynos of a specific type, pass the application name and type [web/worker/foo]
 
 ```ruby
-HerokuDynoRestarter.restart_all_dynos('my-test-application', 'web')
+HerokuDynoRestarter.restart_dynos('my-test-application', 'web')
 ```
 
 ## Development
