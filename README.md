@@ -38,19 +38,19 @@ And store that oauth token in an environment variable called `HEROKU_OAUTH_TOKEN
 To restart a specific dyno pass the application name and the dyno name:
 
 ```ruby
-HerokuDynoRestarter.restart_dyno(app_name, dyno_name)
+HerokuDynoRestarter.restart_dyno('my-test-application', 'web.2')
 ```
 
 To restart all dynos on an application, pass the application name without a dyno name:
 
 ```ruby
-HerokuDynoRestarter.restart_all_dynos(app_name)
+HerokuDynoRestarter.restart_all_dynos('my-test-application')
 ```
 
 To restart all dynos of a specific type, pass the type [web/worker/foo]
 
 ```ruby
-HerokuDynoRestarter.restart_all_dynos(app_name, type)
+HerokuDynoRestarter.restart_all_dynos('my-test-application', 'web')
 ```
 
 ## Development
