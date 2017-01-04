@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jason.harbert@gmail.com"]
 
   spec.summary       = "Rails gem to restart heroku dynos"
-  spec.homepage      = "www.jasonharbert.com"
+  spec.homepage      = "http://www.jasonharbert.com"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
